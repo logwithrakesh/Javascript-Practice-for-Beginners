@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<div id="demo">
+</div>
+
+<div id="demo1">
+</div>
+
+<div id="demo2">
+</div>
+
+<script>
+ 
+ 
+ var myObj : = {"employees" : [
+{"firstName":"Rahul","lastName":"kapoor"},
+{"firstName":"Ranjeet","lastName":"singh"},
+{"firstName":"Ram","lastName":"verma"}
+]}
+//var myObj = JSON.parse(myJSON);
+var txt = "";
+txt += "<table border='1'>";
+txt += "<tr>" + "<th>" + "FirtName" + "</th> <th>" + "lastName" + "</th></tr>";
+for(var i = 0; i < myObj.employees.length; i++){
+	txt += "<tr>"+ "<td>" + myObj.employees[i].firstName + "</td>" 
+		+"<td>" + myObj.employees[i].lastName + "</td>" +"</tr>";
+
+}
+txt += "</table>";
+
+ document.getElementById("demo").innerHTML = txt;
+</script>
+
+<script>
+var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+var myObj = JSON.parse(myJSON);
+document.getElementById("demo1").innerHTML = myObj.name + myObj.age;
+</script>
+
+<script>
+ 
+ 
+ var text = '{"employees" : [' +
+'{"firstName":"Rahul","lastName":"kapoor"},'+
+'{"firstName":"Ranjeet","lastName":"singh"},'+
+'{"firstName":"Ram","lastName":"verma"}]}';
+var Obj = JSON.parse(text);
+document.getElementById("demo2").innerHTML = Obj.employees[1].firstName;
+</script>
+
+<script>
+var x = 5;
+{
+let x = 10;
+}
+console.log(x);
+</script>
+
+<script>
+var y = "ram";
+{
+let y = "rama";
+}
+console.log(y);
+</script>
+
+</body>
+</html>

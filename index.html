@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+
+<h1 id="demo">
+</h1>
+
+<div id="demo1">
+</div>
+
+<div id="demo2">
+</div>
+
+<div id="demo3">
+</div>
+
+<div id="demo4">
+</div>
+
+<div id="demo5">
+</div>
+
+<div>
+	<input type="text" id = "age" value = "18">
+<button type="button" onClick="myFunction();" > click here </button>
+<p id ="demo13"></P>
+</div>
+
+
+<div>
+	<input type="text" id = "name" value = "abhi">
+<button type="button" onClick="myCheckname();" > click here </button>
+<p id ="demo14"></P>
+</div>
+
+<script>
+document.getElementById("demo").innerHTML="Welcome to Java Script";
+document.getElementById("demo1").innerHTML=45+78-54;
+alert("Peter John Bassallica");
+console.log(45+79-42);
+console.log("Peter John Bassallica");
+document.write(7+7);
+document.write("Hello Sir");
+</script>
+
+
+<script>
+var x=45;
+var y=139;
+var z=x+y;
+alert(z)
+</script>
+
+<script>
+var x,y,z;
+x=7;
+y=99;
+z=x+y;
+</script>
+ 
+<script>
+var x=6;
+var y=10;
+var z=x+y;
+document.getElementById("demo2").innerHTML=x+y;
+
+</script>
+
+
+
+
+<script>
+var firstName, lastName, age;
+firstName = "Avinash";
+lastName = "patel";
+age = 24;
+fullName = firstName + " " + lastName;
+document.getElementById("demo4").innerHTML= fullName + " is " + age + " years old ";
+</script>
+
+
+<script>
+var firstName,lastName,age;
+firstName="Abhijeet";
+lastName="Kumar";
+age=24;
+fullName=firstName+lastName+age;
+document.getElementById("demo5").innerHTML=fullName;
+</script>
+
+<div id="demo6">
+</div>
+
+<div id="demo7">
+</div>
+
+<div id="demo8">
+</div>
+
+<div id="demo9">
+</div>
+
+<div id="demo10">
+</div>
+
+<div id="demo11">
+</div>
+
+<div id="demo12">
+</div>
+
+<script>
+"use strict"
+var x =16+5+"good number"+(45+12);
+var z ="45"*"45";
+document.getElementById("demo6").innerHTML= x + "<br>" + z;
+console.log(typeof x);
+<!-- var price=boolean("hello"); -->
+<!-- document.getElementById("demo7").innerHTML=price; -->
+let name="abhijeet";
+let message=name;
+alert(message);
+const myBirthday= "18.09.1992";
+alert(myBirthday);
+</script>
+
+
+<script>
+var y = null;
+document.getElementById("demo7").innerHTML= y;
+var x;
+document.getElementById("demo8").innerHTML= x;
+</script>
+
+<script>
+var age = 16;
+if (age < 18){
+document.getElementById ("demo9").innerHTML = "too young!";
+}else /*if (age > 18)*/{
+document.getElementById ("demo9").innerHTML= "too mature!";
+}/*else{
+alert = "not match statement";
+}*/
+//document.getElementById ("demo9").innerHTML = age;
+</script>
+
+<script>
+
+function myFunction (a,b) {
+return a*b;
+}
+/*alert (myFunction(4,3));*/
+document.getElementById ("demo10").innerHTML= myFunction(4,3);
+</script>
+
+<script>
+function celsius(f) {
+return (5/9)*(f-32);
+}
+/*alert (myFunction(4,3));*/
+document.getElementById ("demo11").innerHTML = celsius(4);
+</script>
+
+
+<script>
+var hour=12;
+var minute=30;
+
+/*var fullName="time"+" "+"is"+" "+hour+":"+minute;
+document.getElementById("demo12").innerHTML= fullName;*/
+if (hour==12 && minute==30){
+alert ("time is 12:30");
+}
+</script>
+
+<script>
+
+//variable name = (condition)? value1 : value2;
+
+function myFunction (){
+var age,voteable;
+age = document.getElementById ("age").value;
+voteable = (age < 18)? "too young" : "old enough";
+document.getElementById("demo13").innerHTML = voteable + " " +"to vote";
+}
+</script>
+
+<script>
+
+//variable name = (condition)? value1 : value2;
+
+function myCheckname (){
+//var name,result;
+var name = document.getElementById("name").value;
+var result = (name=="abhi")? "hello abhi" : "you are not abhi";
+document.getElementById("demo14").innerHTML = result ;
+}
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

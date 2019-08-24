@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+<div id="demo">
+</div>
+
+<div id="demo1">
+</div>
+
+<div id="demo2">
+</div>
+
+<div id="demo3">
+</div>
+
+
+<button onClick = "document.write(4)">clickhere</button>
+
+<script>
+var name = prompt("what is your name?","peter");
+alert(`you are ${name}`);
+</script>
+
+<script>
+var request = confirm("are you boss?");
+alert(request)
+</script>
+
+
+<script>
+function myFunction(x,y){
+     if(y === undefined){
+	y = 5;
+};
+	return x*y;
+
+};
+document.getElementById("demo").innerHTML= myFunction(4);
+</script>
+
+<script>
+var myobject = {
+firstname : "abhijeet",
+lastname : "patel",
+fullname : function(){
+return this.firstname+" "+this.lastname;
+}
+}
+var x = myobject.fullname();
+document.write(x);
+</script>
+
+
+<!-- new fuction start here-->
+<!-- <p id="demo2"> </p> -->
+
+<script>
+var person = {
+
+fullName : function(city,country){
+return this.firstName+" "+this.lastName+" "+city+" "+country;
+}
+};
+
+var person1 = {
+firstName : "abhijeet",
+lastName : "patel",
+};
+var person2 = {
+firstName : "ram",
+lastName : "sharma",
+};
+var x = person.fullName.call(person2,"osla","norway");
+document.getElementById("demo1").innerHTML = x;
+</script>
+
+<!-- new fuction end here-->
+
+
+<script>
+var person = {
+
+fullName : function(city,country){
+return this.firstName+" "+this.lastName+" "+city+" "+country;
+}
+};
+
+var person1 = {
+firstName : "abhijeet",
+lastName : "patel",
+};
+var person2 = {
+firstName : "ram",
+lastName : "sharma",
+};
+var x = person.fullName.apply(person2,["osla","norway"]);
+document.getElementById("demo2").innerHTML = x;
+</script>
+
+<!-- new fuction end here-->
+
+<script>
+function displayDate(){
+document.getElementById("demo3").innerHTML = Date();
+}
+</script>
+<button onClick = displayDate()> clickhere </button>
+
+<script>
+function displayDate(){
+document.getElementById("demo3").innerHTML = Date();
+}
+</script>
+<button onmouseout = displayDate()> clickhere </button>
+
+
+
+
+
+</body>
+</html>

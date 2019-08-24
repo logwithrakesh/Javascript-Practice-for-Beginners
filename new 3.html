@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+
+<div id="demo">
+</div>
+
+<div id="demo1">
+</div>
+
+<div id="demo2">
+</div>
+
+<div id="demo3">
+</div>
+
+<div id="demo4">
+</div>
+
+<div id="demo5">
+</div>
+
+<div id="demo6">
+</div>
+
+<form name="myForm"action="#" onsubmit="return validateForm()" method="post">
+Name:<input type="text" name="name"  value="">
+<input type="submit" value="submit">
+</form>
+
+<script>
+var initializedVariable; // declare variable
+console.log(initializedVariable); // logs undefined 
+console.log(typeof initializedVariable); // confirm that JavaScript returns undefined
+var foo = {};
+console.log(foo.bar); // logs undefined, no bar property in foo object
+console.log(typeof foo.bar); // confirm that JavaScript returns undefined
+
+</script>
+
+<script>
+// string, number, and boolean objects
+ console.log(typeof new String('foo'));// logs 'object' 
+ console.log(typeof new Number(1)); // logs 'object'
+ console.log(typeof new Boolean(true)); // logs 'object'
+// string, number, and boolean literals/primitives
+ console.log(typeof 'foo'); // logs 'string' 
+ console.log(typeof 1); // logs 'number'
+ console.log(typeof true); // logs 'boolean'
+
+</script>
+
+<script>
+ function initWebGL(canvas) {
+ var gl = null;
+ var msg = "Your browser does not support WebGL, " + "or it is not enabled by default.";       
+try     
+{           
+gl = canvas.getContext("experimental-webgl"); 
+} 
+catch (e)      
+{
+msg = "Error creating WebGL Context!: " + e.toString(); 
+}
+if (!gl)
+{          
+alert(msg);            
+throw new Error(msg);       
+}
+return gl;    
+}
+
+</script>
+
+<script>
+var person = {fname : "aman", lname : "verma", nationality : "indian"
+};
+//person.fname;
+//person ["fname"];-
+//person.fname+" "+person.lname;
+/*for(variable in object){
+code to be executed
+}*/
+//Add property
+var x, text = " ";
+for(x in person){
+text += person[x]+"<br>";
+}
+delete person.nationality;
+document.getElementById("demo").innerHTML = text;
+
+
+</script>
+
+<!-------------------- GET AND SET METHOD  -------------------->
+
+<script>
+var student = {fname : "varun",lname : "verma",language : " ",
+//var student.language = uppercase();
+set lang(value){
+   this.language = value;
+}
+};
+student.lang="marathi"
+document.getElementById("demo1").innerHTML = student.language;
+</script>
+
+<script>
+var car = {name: "honda", model: "brio", color : "Not Availble",
+set col(value){
+   this.color = value;
+   },
+get cr(){
+  return this.name+" "+ this.model+" "+"in"+" "+ this.color + " looking cool";
+}
+};
+car.col = "blue"
+document.getElementById("demo2").innerHTML = car.cr;
+</script>
+
+
+<script>
+var company = {name: "ivana designs", position: "designer", id : "Not Availble",
+set ids(value){
+   this.id = value;
+   },
+get comp(){
+  return this.name+" "+"is best"+" "+ this.position+" "+"store now"+" "+ this.id + " "+"in india";
+}
+};
+company.ids = "yes availble"
+document.getElementById("demo3").innerHTML = company.comp;
+</script>
+
+<script>
+var student = {Name: "Rahul Verma", Class: "fifth Class", Medium : "Marathi Medium",
+set cla(value){
+   this.Class = value;
+   },
+set med(value){
+   this.Medium = value;
+   },
+get stud(){
+  return this.Name+" "+"Go Into"+" "+ this.Class+" "+"And Take"+" "+ this.Medium;
+}
+};
+student.cla = "Sixth Class"
+student.med = "Semi-English Medium"
+document.getElementById("demo4").innerHTML = student.stud;
+</script>
+
+<!-------------------- END HERE  -------------------->
+
+<!-------------------- OBJECT CONSTRUCTION METHOD -------------------->
+
+<script>
+function person(first,last,age,eye){
+this.firstname = first;
+this.lastname = last;
+this.age = age;
+this.eye = eye;
+this.foods = "Punjabi food";
+}
+
+var myFather = new person("Ranjeet","Singh","65","Black");
+var myMother = new person("Mansi","Kaur","60","Black");
+var myBrother = new person("Ranveer","Singh","30","Black");
+myFather.nationality = "Indian";
+myMother.nationality = "U.K.";
+myBrother.nationality = "Indian";
+document.getElementById("demo5").innerHTML = "My Father Eye Color is"+" "+myFather.foods+" "+"color"+" "+"And"+" "+myFather.nationality;
+document.write(myMother.age+" "+myMother.nationality);
+</script>
+
+<!-------------------- END HERE  -------------------->
+
+<!-------------------- OBJECT CONSTRUCTION FUNCTION METHOD  -------------------->
+<script>
+function person(first,last,age,eye){
+this.firstname = first;
+this.lastname = last;
+this.age = age;
+this.eye = eye;
+this.foods = "Punjabi food";
+}
+person.prototype.nationality = "german";
+person.prototype.name = function(){
+return this.firstname+" "+this.lastname;
+}
+var myFather = new person("Ranjeet","Singh","65","Black");
+var myMother = new person("Mansi","Kaur","60","Black");
+var myBrother = new person("Ranveer","Singh","30","Black");
+myFather.nationality = "Indian";
+myMother.nationality = "U.K.";
+myBrother.nationality = "Indian";
+document.getElementById("demo5").innerHTML = "My Father Eye Color is"+" "+myFather.foods+" "+"color"+" "+"And"+" "+myFather.nationality;
+document.write(myMother.age+" "+myMother.nationality);
+</script>
+<!-------------------- END HERE  -------------------->
+
+<!----------HTML FORM-------------->
+
+<script>
+function validateForm(){
+var x = document.forms["myform"]["name"].value;
+if (x == " "){
+document.getElementById("demo6").innerHTML("name must be required");
+return false;
+}
+};
+</script>
+
+</body>
+</html>

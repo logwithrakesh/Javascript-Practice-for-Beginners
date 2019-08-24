@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+<script>
+
+document.write ("hello world");
+</script>
+
+<script>
+
+var sum = 10+10+" "+'hello';
+document.write(sum);
+
+</script>
+
+<!-- <script> -->
+<!-- var a = 10 , b = "10"; -->
+<!-- if (a===b){ -->
+<!-- alert ("best"); -->
+<!-- } -->
+<!-- else{ -->
+<!-- alert("bad"); -->
+<!-- } -->
+<!-- </script> -->
+
+<!-- <script> -->
+<!-- var result = confirm("are you sure"); -->
+<!-- if(result==false) -->
+<!-- { -->
+<!-- window.location = "https://www.youtube.com/watch?v=Zd2tOtmlrW0&list=PLZdjW012sjggNRx20B6DVLt6FKYqXfUGi&index=12/"; -->
+<!-- } -->
+<!-- </script> -->
+
+<div id="demo">
+</div>
+
+<div id="demo1">
+</div>
+
+<div id="demo2">
+</div>
+
+<div id="demo3">
+</div>
+
+<div id="demo8">
+</div>
+
+<div id="demo9">
+</div>
+
+<div id="demo10">
+</div>
+
+
+<script>
+var str = "apple,banana,kiwi";
+var fruit = str.substr(4,11);
+document.getElementById("demo").innerHTML = fruit;
+</script>
+
+
+<script>
+var str2 = " please visit our store ";
+var m = str2.charCodeAt(8);
+document.getElementById("demo3").innerHTML = m;
+</script>
+
+<script>
+var str1 = " please visit our store ";
+var m = str1.replace("store","shop");
+document.getElementById("demo1").innerHTML = m;
+</script>
+
+<script>
+var pens = ["rotomac","reynolds","hp"];
+pens[3] = "waterman";
+document.getElementById("demo2").innerHTML = pens;
+</script>
+
+<script>
+let matrix = [[1,2,3],[4,5,6],[7,8,9]];
+alert(matrix[1][0]);
+</script>
+
+<!-- <script> -->
+<!-- while (condition){ -->
+<!-- //code// -->
+<!-- } -->
+<!-- let er=0; -->
+<!-- while(er<3){ -->
+<!-- alert(er); -->
+<!-- er++; -->
+<!-- } -->
+<!-- </script> -->
+
+
+<script>
+let vr = 0;
+do{
+alert(vr);
+vr++;
+}
+while (vr<3);
+</script>
+
+<script>
+for (let we=0; we<3; we++){
+alert(we);
+}
+</script>
+
+<script>
+fruits = ["apple","kiwi","babana"];
+fruits.push("mango");
+alert(fruits);
+</script>
+
+<script>
+fruits = ["apple","kiwi","babana"];
+fruits.pop();
+alert(fruits);
+</script>
+
+<script>
+fruits = ["apple","kiwi","babana"];
+fruits.shift();
+alert(fruits);
+</script>
+
+<script>
+fruits = ["apple","kiwi","babana"];
+fruits.unshift("mango");
+alert(fruits);
+</script>
+
+<script>
+fruits = ["apple"];
+let arr=fruits;
+alert(arr===fruits);
+</script>
+
+<script>
+let vrr = ["apple","kiwi","banana"];
+for (let k=0; k < 3;k++){
+document.getElementById("demo8").innerHTML = k;
+}
+</script>
+
+<!-- <script> -->
+<!-- var students1 = ["ram","raja"]; -->
+<!-- var students2 = ["hari","sita"]; -->
+<!-- document.write(students1.concat(students2)); -->
+<!-- </script> -->
+
+
+<script>
+var students1 = ["ram",[1,2,3,5],"raja"];
+<!-- var students2 = ["hari","sita"]; -->
+document.write(students1);
+console.log(students1);
+</script>
+
+
+<script>
+var day;
+switch(new Date().getDay()){
+case 0 : day = "sunday";
+break; 
+case 1 : day = "monday";
+break; 
+case 2: day = "tuesday";
+break; 
+default : "no match current day";
+};
+
+
+console.log("Today is" +" "+ day + " " + new Date);
+
+</script>
+
+<script>
+var cars = "german car";
+switch(cars){
+case "german car" : cars = "bmw";
+break; 
+case "american car" : cars = "ford";
+break; 
+case "french car": cars = "peugeot";
+break; 
+default : "no match cars";
+};
+
+
+console.log("my best" +" "+ cars);
+
+</script>
+
+<script>
+var  = new Date();
+console.log(d.getDate());
+</script>
+
+<script>
+var a = "block";
+
+{
+let a = "function";
+
+}
+
+console.log(a);
+</script>
+
+<script>
+var x = "hello";
+var person = {fname:"jai",lname:"patel",age:30};
+document.getElementById("demo9").innerHTML = person["fname"] + " " + person["lname"]+" is "+ person["age"]+" years old";
+</script>
+
+<script>
+var x = "hello";
+var person = {fname:"jai",lname:"patel",age:30,
+fullName : function(){
+return this.fname+" "+this.lname;
+}
+}
+document.getElementById("demo10").innerHTML = person.fullName();
+</script>
+
+</body>
+</html>
